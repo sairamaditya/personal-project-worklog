@@ -1,4 +1,3 @@
-homelab-setup.md
 
 ***
 
