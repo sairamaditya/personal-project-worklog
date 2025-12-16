@@ -44,6 +44,8 @@ This document captures the steps taken to rescue an HP t540 thin client from a d
 3. Wait until the flashing and verification completes successfully.
 4. Eject the USB drive from Finder, then physically unplug it.
 
+This did not work so used windows, steps are provided below
+
 ### 2.4 Handling Etcher stuck around ~48%
 
 If Etcher appears stuck at ~48%:
@@ -60,6 +62,25 @@ If Etcher appears stuck at ~48%:
 5. If problems persist:
    - Try a different USB stick.
    - Re‑download the Ubuntu ISO.
+
+***
+
+### 2.5 Download Ubuntu ISO
+
+1. On windows machine with a browser, download the latest LTS 64‑bit Ubuntu Desktop ISO from the official Ubuntu download page and save it locally (for example to `Downloads`).  
+2. Copy or make sure this ISO is available on the Windows PC that will run Rufus.
+
+### 2.6 Create the USB installer on Windows with Rufus
+
+1. On a Windows PC, plug in an empty USB flash drive (8 GB or larger).  
+2. Download and run Rufus (portable executable is fine).  
+3. In Rufus:  
+   - **Device**: select the target USB drive.  
+   - **Boot selection**: choose the downloaded Ubuntu ISO.  
+   - **Partition scheme**: use GPT, **Target system**: UEFI (recommended for HP t540).  
+   - Leave file system and cluster size at defaults.  
+4. Click **Start**, confirm that the USB will be erased, and wait until Rufus reaches 100% and reports completion.  
+5. Safely eject the USB drive from Windows and move it to the HP t540 to continue with the installation steps already documented.
 
 ***
 
